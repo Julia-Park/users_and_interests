@@ -1,0 +1,25 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  color: red;  
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.menu {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

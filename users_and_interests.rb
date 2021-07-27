@@ -23,7 +23,6 @@ end
 get "/" do
   @title = "User List"
   erb :home
-  # home page should redirect to a page that lists all of the users' names from users.yml
 end
 
 get "/add_new" do # WISHLIST: add functionality for adding new users via app
