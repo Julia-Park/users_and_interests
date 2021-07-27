@@ -1,14 +1,25 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #666;
 }
 
 a {
-  color: red;  
+  color: red;
+  text-decoration: none;
 }
 
 h1 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 80px;
+  font-size: 70px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #333;
   margin-top: 0;
   margin-bottom: 0;
 }

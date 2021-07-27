@@ -14,6 +14,10 @@ helpers do
       total + data[:interests].size
     end
   end
+
+  def html_link(url, display_text, additional_attributes="")
+    "<a href=""#{url}"" #{additional_attributes}>#{display_text}</a>"
+  end
 end
 
 # application should have layout that has a summary of # of all current users and sum of their interests
@@ -29,7 +33,9 @@ get "/add_new" do # WISHLIST: add functionality for adding new users via app
   redirect "/"
 end
 
-get "/user/*" do
+get "/user/:name" do
+  @title = params[:name].capitalize
+  erb :profile
 # each user name should be a link to a page for that user
   # display email address, list of interests with a comma separating in between
   # include menu at bottom of each users's page with a link to all the other users (not including current user)
