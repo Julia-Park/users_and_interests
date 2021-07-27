@@ -1,7 +1,7 @@
 <div id="user_list">
   <ul>
   <% @user_list.each do |name| %>
-    <li><h2><%= html_link("/user/#{name.downcase}", name.downcase) %></h2></li>
+    <li><h2><%= html_link("/user/#{name}", name.downcase) %></h2></li>
   <% end %>
   </ul>
 </div>

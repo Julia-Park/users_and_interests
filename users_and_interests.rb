@@ -18,6 +18,11 @@ helpers do
   def html_link(url, display_text, additional_attributes="")
     "<a href=""#{url}"" #{additional_attributes}>#{display_text}</a>"
   end
+
+  def generate_navigation_links(user_name)
+    eligible_profiles = @user_list.select { |name| name.to_s != user_name }
+    eligible_profiles.map { |name| html_link("/user/#{name}", name)}.join("  |  ")
+  end
 end
 
 # application should have layout that has a summary of # of all current users and sum of their interests
@@ -36,9 +41,6 @@ end
 get "/user/:name" do
   @title = params[:name].capitalize
   erb :profile
-# each user name should be a link to a page for that user
-  # display email address, list of interests with a comma separating in between
-  # include menu at bottom of each users's page with a link to all the other users (not including current user)
 end
 
 not_found do # WISHLIST: add custom error message?
