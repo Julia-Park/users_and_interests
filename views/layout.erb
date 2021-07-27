@@ -7,11 +7,14 @@
     <title><%= @title %></title>
   </head>
   <body>
-    <div id="layout">
-      <h1><%= @title %></h1>
-      <%= yield %>
-    </div>
-    <div id="summary">
+    <div id="content">
+      <div id="layout">
+        <h1><%= @title %></h1>
+        <%= yield %>
+      </div>
+      <div id="summary">
+        <p><%= "There are #{@user_list.size} users with a total of #{count_interests} interests." %></p>
+      </div>
     </div>
   </body>
 </html>

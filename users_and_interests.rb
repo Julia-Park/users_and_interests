@@ -25,10 +25,6 @@ helpers do
   end
 end
 
-# application should have layout that has a summary of # of all current users and sum of their interests
-  # use helper method count_interests
-# add new user to users.yaml file and verify that the site updates accordingly
-
 get "/" do
   @title = "User List"
   erb :home
@@ -39,10 +35,17 @@ get "/add_new" do # WISHLIST: add functionality for adding new users via app
 end
 
 get "/user/:name" do
-  @title = params[:name].capitalize
-  erb :profile
+  @title, destination =
+    if @user_list.include?(params[:name].to_sym)
+      [params[:name].capitalize, :profile]
+    else 
+      ["User Not Found", :not_found]
+    end
+
+  erb destination
 end
 
 not_found do # WISHLIST: add custom error message?
-  redirect "/"
+  @title = "Content Not Found"
+  erb :not_found
 end

@@ -5,12 +5,16 @@ body {
   margin: 0;
 }
 
-div#layout {
+div#content {
   background-color: white;
-  min-height: 100vh;
   margin: auto;
+  min-height: 100vh;
   width: 60%;
   padding: 8px;
+}
+
+#navigation, #summary {
+  text-align: center;  
 }
 
 a {
@@ -63,8 +67,4 @@ hr {
   width: 80%;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-#navigation {
-  text-align: center;  
 }
