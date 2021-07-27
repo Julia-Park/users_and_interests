@@ -26,6 +26,10 @@ helpers do
 end
 
 get "/" do
+  redirect "/users"
+end
+
+get "/users" do
   @title = "User List"
   erb :home
 end
