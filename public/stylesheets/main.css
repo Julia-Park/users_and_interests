@@ -16,7 +16,7 @@ h1 {
   margin-bottom: 0;
 }
 
-h2 {
+h2, #subheading {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #333;
@@ -26,6 +26,10 @@ h2 {
 
 .menu {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.tab { 
+  margin-left: 40px;
 }
 
 hr {

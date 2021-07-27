@@ -1,0 +1,6 @@
+<div id="profile">
+  <% @users[params[:name].to_sym].each do |category, data| %>
+    <p><span class="subheading"><%= category %></span> <%= data %></p>
+
+  <% end %>
+</div>
