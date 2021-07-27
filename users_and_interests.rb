@@ -30,10 +30,6 @@ get "/" do
   erb :home
 end
 
-get "/add_new" do # WISHLIST: add functionality for adding new users via app
-  redirect "/"
-end
-
 get "/user/:name" do
   @title, destination =
     if @user_list.include?(params[:name].to_sym)
@@ -45,7 +41,7 @@ get "/user/:name" do
   erb destination
 end
 
-not_found do # WISHLIST: add custom error message?
+not_found do
   @title = "Content Not Found"
   erb :not_found
 end
