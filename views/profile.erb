@@ -1,6 +1,10 @@
 <div id="profile">
+  <table>
   <% @users[params[:name].to_sym].each do |category, data| %>
-    <p><span class="subheading"><%= category %></span> <%= data %></p>
-
+    <tr>
+    <th class="subheading"><%= category.downcase %></th>
+    <td><%= data.class == String ? data.downcase : data.map(&:downcase).join(", ") %></td>
+    </tr>
   <% end %>
+  </table>
 </div>

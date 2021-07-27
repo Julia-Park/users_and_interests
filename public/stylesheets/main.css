@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: ".";
+}
+
 h1 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 70px;
@@ -16,12 +20,23 @@ h1 {
   margin-bottom: 0;
 }
 
-h2, #subheading {
+h2, .subheading {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #333;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 8px;
+}
+
+table, td {
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+th {
+  text-align: right;
 }
 
 .menu {
