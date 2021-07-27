@@ -4,11 +4,16 @@ require "tilt/erubis"
 require "yaml"
 
 before do
-  @user_list = YAML.load(File.read("data/users.yml"))
+  @users = YAML.load(File.read("data/users.yml"))
+  @user_list = @users.keys
 end
 
 helpers do
-  def count_interests; end
+  def count_interests
+    @users.values.reduce(0) do |total, data|
+      total + data[:interests].size
+    end
+  end
 end
 
 # application should have layout that has a summary of # of all current users and sum of their interests
@@ -16,7 +21,8 @@ end
 # add new user to users.yaml file and verify that the site updates accordingly
 
 get "/" do
-  erb @user_list
+  @title = "User List"
+  erb :home
   # home page should redirect to a page that lists all of the users' names from users.yml
 end
 
